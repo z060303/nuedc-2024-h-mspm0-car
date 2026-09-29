@@ -7,7 +7,8 @@
  */
 void Motor_Init(void)
 {
-    // 启动 PWM 定时器
+    // SysConfig 默认比较值为 500；在启动计数器前先归零，避免上电瞬间输出。
+    Motor_Set_PWM(0, 0);
     DL_Timer_startCounter(PWM_0_INST);
 }
 
