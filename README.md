@@ -69,6 +69,19 @@ flowchart LR
 
 原工程使用的 OLED 字库/显示驱动来源许可不明，因此公开版本删除了 OLED 调用与依赖，并把原本由 OLED 模块提供的延时调用改为工程已有的 `mspm0_delay_ms()`。没有参与构建的 InvenSense MPU6050 示例也未纳入。灰度串口接收处补了缓存边界与最短帧检查，防止短帧读取旧数据或长帧写出缓冲区。电机 PWM 计数器启动前先将左右比较值设为 0，避免使用 SysConfig 初始的 500 计数值。其余巡线、航向和电机控制参数按所给工程保留。详见 [第三方代码与整理说明](THIRD_PARTY_NOTICES.md)。
 
+## 样机效果
+
+<img width="1279" height="1706" alt="微信图片_20260929152811_1204_5" src="https://github.com/user-attachments/assets/31740db1-fdf5-472a-9f18-91856db712db" />
+
+
+https://github.com/user-attachments/assets/4837459e-cba0-4c50-9fd6-fe23795cb988
+
+
+
+https://github.com/user-attachments/assets/819634d0-ad50-48c4-b274-fff7b2776f9f
+
+
+
 ## 许可
 
 除文件内另有许可声明的 TI 模板部分外，本仓库应用代码、文档和构建脚本按 [MIT License](LICENSE) 开源。使用 TI SDK 组件时遵守其原始许可；详见 [第三方代码与整理说明](THIRD_PARTY_NOTICES.md)。
