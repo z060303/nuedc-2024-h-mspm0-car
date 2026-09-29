@@ -1,0 +1,11 @@
+Debug/
+Release/
+build/
+.settings/
+*.out
+*.map
+*.o
+*.d
+*.launch
+*.log
+README.html
